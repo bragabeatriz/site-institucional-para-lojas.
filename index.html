@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa & Lar - Utilidades Domésticas e Eletrodomésticos</title>
+    <meta name="description" content="Loja online especializada em utilidades domésticas e eletrodomésticos com os melhores preços e qualidade.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <h1><i class="fas fa-home"></i> Casa & Lar</h1>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link">Início</a></li>
+                        <li><a href="#produtos" class="nav-link">Produtos</a></li>
+                        <li><a href="#categorias" class="nav-link">Categorias</a></li>
+                        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                        <li><a href="#contato" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <!-- Search -->
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Buscar produtos..." class="search-input">
+                        <button class="search-btn" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- User Account -->
+                    <button class="user-btn">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    
+                    <!-- Shopping Cart -->
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Transforme sua casa com nossos produtos</h2>
+                    <p class="hero-subtitle">Encontre as melhores utilidades domésticas e eletrodomésticos com qualidade e preços incríveis</p>
+                    <button class="cta-btn">Ver Produtos</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories" id="categorias">
+            <div class="container">
+                <h2 class="section-title">Nossas Categorias</h2>
+                <div class="categories-grid">
+                    <div class="category-card" data-category="utensilios">
+                        <div class="category-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Utensílios de Cozinha</h3>
+                        <p>Panelas, talheres, utensílios e muito mais</p>
+                    </div>
+                    
+                    <div class="category-card" data-category="eletrodomesticos">
+                        <div class="category-icon">
+                            <i class="fas fa-blender"></i>
+                        </div>
+                        <h3>Eletrodomésticos</h3>
+                        <p>Geladeiras, micro-ondas, liquidificadores</p>
+                    </div>
+                    
+                    <div class="category-card" data-category="organizacao">
+                        <div class="category-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h3>Organização</h3>
+                        <p>Organizadores, cestas e soluções práticas</p>
+                    </div>
+                    
+                    <div class="category-card" data-category="limpeza">
+                        <div class="category-icon">
+                            <i class="fas fa-broom"></i>
+                        </div>
+                        <h3>Limpeza</h3>
+                        <p>Aspiradores, produtos e acessórios</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products" id="produtos">
+            <div class="container">
+                <div class="products-header">
+                    <h2 class="section-title">Produtos em Destaque</h2>
+                    <div class="filters">
+                        <button class="filter-btn active" data-filter="all">Todos</button>
+                        <button class="filter-btn" data-filter="utensilios">Utensílios</button>
+                        <button class="filter-btn" data-filter="eletrodomesticos">Eletrodomésticos</button>
+                        <button class="filter-btn" data-filter="organizacao">Organização</button>
+                        <button class="filter-btn" data-filter="limpeza">Limpeza</button>
+                    </div>
+                </div>
+                
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="sobre">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">Sobre a Casa & Lar</h2>
+                        <p>Há mais de 10 anos no mercado, a Casa & Lar é especializada em oferecer os melhores produtos para sua casa. Nossa missão é proporcionar qualidade, praticidade e economia para o seu dia a dia.</p>
+                        <div class="features">
+                            <div class="feature">
+                                <i class="fas fa-shipping-fast"></i>
+                                <div>
+                                    <h4>Entrega Rápida</h4>
+                                    <p>Entregamos em todo o Brasil</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h4>Garantia de Qualidade</h4>
+                                    <p>Produtos com garantia estendida</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-credit-card"></i>
+                                <div>
+                                    <h4>Pagamento Seguro</h4>
+                                    <p>Diversas formas de pagamento</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Casa & Lar</h3>
+                    <p>Sua loja de confiança para utilidades domésticas e eletrodomésticos.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="#">Utensílios de Cozinha</a></li>
+                        <li><a href="#">Eletrodomésticos</a></li>
+                        <li><a href="#">Organização</a></li>
+                        <li><a href="#">Limpeza</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Atendimento</h4>
+                    <ul>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Política de Troca</a></li>
+                        <li><a href="#">Frete e Entrega</a></li>
+                        <li><a href="#">Formas de Pagamento</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
+                        <p><i class="fas fa-envelope"></i> contato@casaelar.com.br</p>
+                        <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Casa & Lar. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-header">
+                <h3>Carrinho de Compras</h3>
+                <button class="close-cart" id="closeCart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be dynamically loaded here -->
+            </div>
+            
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: R$ <span id="cartTotal">0,00</span></strong>
+                </div>
+                <button class="checkout-btn">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="product-modal-content">
+            <button class="close-modal" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="product-modal-body">
+                <div class="product-image">
+                    <img id="modalProductImage" src="" alt="">
+                </div>
+                
+                <div class="product-details">
+                    <h3 id="modalProductName"></h3>
+                    <p class="product-price">R$ <span id="modalProductPrice"></span></p>
+                    <p class="product-description" id="modalProductDescription"></p>
+                    
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantidade:</label>
+                        <div class="quantity-controls">
+                            <button class="qty-btn" id="decreaseQty">-</button>
+                            <input type="number" id="quantity" value="1" min="1">
+                            <button class="qty-btn" id="increaseQty">+</button>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-cart-btn" id="addToCartModal">
+                        <i class="fas fa-shopping-cart"></i>
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
